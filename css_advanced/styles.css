@@ -249,20 +249,17 @@ nav ul li a {
     gap: 30px;
 }
 
-#videos div>.thumbnail::after{
-    content: url(images/play.png);
+.video_box>div{
+    position: relative;
+}
+
+.play{
+    width: 64px;
+    height: 64px;
     position: absolute;
-    z-index: 999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    /* background-image: url(images/play.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .video_box{
