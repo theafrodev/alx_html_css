@@ -1,0 +1,474 @@
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-It.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-Bold.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(fonts/source-sans-pro/SourceSansPro-Black.otf);
+  font-weight: 800;
+}
+
+html, body, *{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro";
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+header{
+    background-image: url(images/Object.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* min-height: 100vh; */
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 30px;
+}
+
+header nav img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 160px;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+}
+
+#large_head h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-size: 120px;
+    font-weight: 800;
+}
+
+#large_head *{
+    text-align: center;
+}
+
+#large_head>div:first-of-type{
+    display: flex;
+    flex-direction: column;
+    padding-block: 100px;
+}
+
+#large_head>div>div{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+#large_head>div>div>span{
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#large_head button{
+    display: block;
+    margin: auto;
+    padding: 14px 20px;
+    border-radius: 22px;
+    background-color: #c271ff;
+    border: 0px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-block: 40px;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, .5);
+}
+
+#large_head h2{
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 32px;
+    font-weight: 200;
+}
+
+#large_head h2>span{
+    color: #c271ff;
+    font-weight: 700;
+}
+
+#large_head>div>.people_grid{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 80px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.round img{
+    border-radius: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.people_grid.round img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.people_grid.round>div{
+    max-width: 150px;
+}
+
+.people_grid>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text_white *{
+    color: #ffffff;
+}
+
+.people_grid h3{
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.people_grid p{
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 400;
+}
+
+#testimonial{
+    background-color: #c271ff;
+    padding-block: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+#testimonial *{
+    color: #ffffff;
+}
+
+#testimonial img{
+    height: 150px;
+    width: 150px;
+}
+
+#testimonial blockquote{
+    font-family: "Source Sans Pro";
+    font-size: 22px;
+    font-weight: 400;
+    max-width: 730px;
+}
+
+#testimonial h3{
+    margin-top: 22px;
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+}
+
+#testimonial p{
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: italic;
+}
+
+#videos{
+    padding-block: 80px;
+}
+
+#videos h2{
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-size: 32px;
+    font-weight: 200;
+}
+
+#videos h2>span{
+    color: #c271ff;
+    font-weight: 700;
+}
+
+#videos>div{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    position: relative;
+    gap: 30px;
+}
+
+#videos div>.thumbnail::after{
+    content: url(images/play.png);
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    /* background-image: url(images/play.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto; */
+}
+
+.video_box{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 5px;
+    /* box-shadow: 0px 2px 4px 0px rgba(7, 22, 41, .18); */
+}
+
+.video_box h3{
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 7px;
+}
+
+.video_box h3, .video_box p, .video_box>div{
+    padding-inline: 13px;
+}
+
+.video_box p{
+    color: rgba(7, 22, 41, .5);
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.rate_person{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.rate_person img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.rate_person h4{
+    color: #c271ff;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating{
+    padding-top: 4px;
+    display: flex;
+    gap: 12px;
+}
+
+.rating i{
+    color: #c271ff;
+    font-size: 14px;
+}
+
+.rating i.grey{
+    color: rgb(193, 193, 193);
+}
+
+.rate_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate_flex p{
+    color: #c271ff;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#membership{
+    background-color: #071629;
+    padding-block: 70px;
+}
+
+#membership *{
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    text-align: center;
+}
+
+#membership h2{
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#membership h2 span{
+    color: #c271ff;
+    font-weight: 700;
+}
+
+#membership>div{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 58px;
+}
+
+#membership>.container>div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#membership>.container>div>img{
+    width: 42px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+#membership h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#membership p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+    max-width: 200px;
+}
+
+#membership button{
+    display: block;
+    margin: auto;
+    padding: 14px 20px;
+    border-radius: 22px;
+    background-color: #c271ff;
+    border: 0px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#FAQ{
+    padding-block: 70px;
+    color: rgba(7, 22, 41, .5);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+#FAQ h2{
+    text-align: center;
+    color: #071629;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+#FAQ>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#FAQ>div>div{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 72px;
+}
+
+#FAQ h3{
+    padding-top: 72px;
+    color: #071629;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #071629;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+footer .container>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 72px;
+    opacity: 0.3517;
+}
+
+footer i{
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #071629;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+}
+
+footer .container>div>div{
+    display: flex;
+    gap: 20px;
+}
+
