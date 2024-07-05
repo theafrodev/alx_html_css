@@ -1,0 +1,16 @@
+.container{
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+a:hover, a:active{
+    color: #FF6565;
+}
+
+button:hover, button:active{
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 480px) {
+    
+}
