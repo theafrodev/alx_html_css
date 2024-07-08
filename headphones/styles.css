@@ -1,3 +1,46 @@
+/* TODO
+
+- Add fonts
+
+*/
+
+@font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-It.otf);
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-Bold.otf);
+    font-weight: 800;
+  }
+  
+  @font-face {
+    font-family: Source Sans Pro;
+    src: url(fonts/source-sans-pro/SourceSansPro-Black.otf);
+    font-weight: 800;
+}
+
 /* css reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -50,9 +93,23 @@ table {
 
 /* My styles */
 
+body, html, body *, html *, *{
+    font-family: "Source Sans Pro";
+}
+
 .container{
     max-width: 1000px;
     margin-inline: auto;
+    padding-inline: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav label{
+    color: #ffffff;
 }
 
 a:hover, a:active{
@@ -69,10 +126,179 @@ header{
     background-image: url(images/headphones_hero_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-rows: 80px auto;
+}
+
+header h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header p{
+    font-size: 16px;
+}
+
+header .logo{
+    max-width: 160px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+nav{
+    /* background-color: black; */
+    width: 100%;
+}
+
+nav>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 30px;
+    /* background-color: #FF6565; */
+    max-width: 1000px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+nav>div>ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav li, #header_text *{
+    color: #ffffff;
+}
+
+#header_text{
+    align-self: center;
+    /* background-color: aqua; */
+    text-align: center;
+    padding-top: 200px;
+}
+
+#header_text p.bold{
+    padding-top: 12px;
+}
+
+#header_text p{
+    line-height: 26px;
+    max-width: 600px;
+}
+
+button{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding-inline: 32px;
+    padding-block: 14px;
+    border-radius: 32px;
+    background-color: #FF6565;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#nav-button{
+    display: none;
+}
+
+.m_empty{
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+section.container{
+    padding-block: 110px;
+}
+
+section.container *{
+    text-align: center;
+}
+
+section.container h3{
+    color: #071629;
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+section.container p{
+    color: #071629;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 /* Mobile */
 
 @media screen and (max-width: 480px) {
+    #nav-button:checked ~ ul{
+        height:140px;
+        transition: height 1s;
+    }
+
+    nav>div>ul{
+        width:100%;
+        background:darkgrey;
+        height:0;
+        overflow:hidden;
+        transition:height 1s;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 70px;
+        text-align: center;
+        left: 0;
+    }
+
+    nav{
+        align-items:center;
+       }
+       
+       nav ul{
+        position:absolute;
+        top:34px;
+        width:100%;
+        background:darkgrey;
+        height:0;
+        overflow:hidden;
+        transition:height 1s;
+       }
+       
+       nav li{
+        display:block;
+        width:100%;
+        padding:5px; 
+       }
+       
+       label{
+        display:block;
+        padding:0px 10px;
+        font-size:30px;
+        cursor:pointer;
+       }
+       
+       label:hover{
+        color:white;
+       }
+       
+       nav a{
+        width:100%;
+        display:block;
+       }
+}
+
+/* Large screens only */
+
+@media screen and (min-width: 481px) {
+    #nav-button{
+        display:none;
+    }
     
+    label{
+        display:none;
+    }
 }
